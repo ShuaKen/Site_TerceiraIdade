@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cérebro em Movimento</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+body {
+  background: #f0f4f8;
+  color: #222;
+  line-height: 1.6; /* Menor que 2, mas ainda confortável */
+  font-size: 20px;
+}
+
+header, section, footer {
+  padding: 30px 20px; /* Reduzi de 50px para 30px */
+  text-align: center;
+}
+
+header {
+  background: #2e6da4;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 5rem;
+  margin-bottom: 10px; /* Reduzi o espaçamento */
+}
+
+header p {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #ff944d;
+  color: #fff;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 8px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff704d;
+}
+
+h2 {
+  color: #004080;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-top: 20px;
+}
+
+section {
+  background: #fff;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px; /* Reduzi de 40px */
+}
+
+ul {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  list-style: disc inside;
+  font-size: 1.3rem;
+}
+
+.memory-card, .color-button {
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px;
+  font-size: 2.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.memory-card {
+  background: #cce0ff;
+  color: #cce0ff;
+  font-weight: bold;
+}
+
+.memory-card.matched {
+  cursor: default;
+  background: #99e699 !important;
+  color: #000 !important;
+}
+
+.color-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 10px;
+}
+
+footer {
+  background: #2e6da4;
+  color: #fff;
+  padding: 30px 20px; /* Reduzido */
+  font-size: 1.4rem;
+}
+
+#sequence-game, #reflex-game, #easy-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+#sequence-game div, #reflex-game div, #easy-game div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.img-container img {
+  width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+</style>
+
+</head>
+<body>
+
+<header>
+<h1>CÉREBRO EM MOVIMENTO</h1>
+<p style="margin-top:20px; font-weight:bold; font-size:1.8rem;">“Mexa-se. Pense. Aprenda. O cérebro adora movimento!”</p>
+</header>
+<section>
+ <h2>Nosso trabalho é especialmente dedicado ao público da terceira idade, com o objetivo de promover a conscientização sobre saúde, mente ativa e qualidade de vida.</h2>
+<ul>
+  <li><strong>Esporte de alto rendimento:</strong> é uma inspiração, mostrando como é possível superar limites em qualquer fase da vida.</li>
+  <li><strong>Estimulação da memória:</strong> oferecemos atividades práticas que unem corpo e mente para manter a mente ativa e saudável.</li>
+  <li><strong>Aprendizagem motora:</strong> aprender algo novo é essencial e pode ser facilmente inserido na rotina, contribuindo para a coordenação e autonomia.</li>
+  <li><strong>Atividade física e saúde:</strong> buscamos conscientizar sobre a importância da prática regular de exercícios e os riscos do sedentarismo.</li>
+  <li><strong>Processamento de informações:</strong> manter-se curioso, ler, acompanhar notícias e se atualizar ajuda o cérebro a funcionar melhor e a manter-se ativo.</li>
+</ul>
+
+</section>
+<section>
+<h2>Esporte de Alto Rendimento</h2>
+<div class="img-container">
+    <img src="materia_jeannie.png" alt="Idosos se alongando">
+    <img src="jeannie-rice-universidade-de-loughborough.avif" alt="Idoso praticando exercícios mentais">
+  </div>
+
+  <div class="reference">
+    <p>Fonte:
+      <a href="https://g1.globo.com/saude/bem-estar/noticia/2025/04/24/corredora-de-77-anos-e-recordista-mundial-tem-consumo-de-oxigenio-igual-a-uma-mulher-de-25-e-foi-estudada-por-pesquisadores.ghtml" target="_blank" rel="noopener noreferrer">Link</a>
+    </p>
+  </div>
+
+<ul>
+<li><strong>Rotina e disciplina:</strong> hábitos consistentes fortalecem saúde.</li>
+<li><strong>Atenção e foco:</strong> exercícios mentais ajudam na concentração.</li>
+<li><strong>Recuperação e descanso:</strong> respeite corpo e sono.</li>
+<li><strong>Alimentação e hidratação:</strong> nutrição influencia energia.</li>
+<li><strong>Motivação:</strong> lições mentais dos atletas para dias difíceis.</li>
+</ul>
+</section>
+
+<section>
+<h2>Jogos Cognitivos e Interativos</h2>
+
+<img src="https://images.pexels.com/photos/6922147/pexels-photo-6922147.jpeg" 
+     alt="Idoso praticando exercícios mentais" 
+     style="width:80%; max-width:600px; border-radius:12px; margin:20px 0;">
+
+<h3>1. Jogo da Memória</h3>
+<button onclick="startAdvancedMemory()"title="Encontre os pares de emojis iguais o mais rápido possível.">Começar Jogo da Memória</button>
+<p id="memory-score" class="feedback"></p>
+<p id="memory-timer" class="feedback">Tempo: 0s</p>
+<div id="advanced-memory-game" style="display:flex; flex-wrap:wrap; justify-content:center; margin-top:20px;"></div>
+
+<h3>2. Lembre o Movimento</h3>
+<button onclick="startSequenceGame()"title="Memorize a sequência de cores que aparece e repita clicando nas cores.">Começar Lembre o Movimento</button>
+<div id="sequence-game"></div>
+
+<h3>3. Clique no Reflexo</h3>
+<button onclick="startReflexGame()" title="Clique rapidamente assim que a cor do quadrado mudar.">Começar Clique no Reflexo</button>
+<div id="reflex-game"></div>
+
+<h3>4. Caminho da Mente</h3>
+<button onclick="startLogicGame()" title="Descubra qual número completa a sequência lógica.">Começar Caminho da Mente</button>
+<div id="logic-game"></div>
+
+<h3>5. Desafio Fácil</h3>
+<button onclick="startEasyGame()" title="Clique no emoji certo entre os vários mostrados.">Começar Desafio Fácil</button>
+<div id="easy-game"></div>
+
+</section>
+
+<section>
+<h2>Aprendizagem Motora</h2>
+
+<img src="https://images.pexels.com/photos/8939945/pexels-photo-8939945.jpeg" 
+     alt="Idosos se alongando" 
+     style="width:80%; max-width:600px; border-radius:12px; margin:20px 0;">
+<h2>Ideias de atividades para encaixar na rotina:</h2>
+<ul>
+<li>Caminhar em diferentes superfícies melhora percepção corporal.</li>
+<li>Subir degraus, varrer, dançar ou se alongar ajusta movimentos.</li>
+<li>Movimentos com mãos, como cozinhar ou jardinagem, fortalecem coordenação fina.</li>
+</ul>
+</section>
+
+<section>
+<h2>Atividade Física e Saúde</h2>
+<h3>A prática regular de atividade física é essencial para promover qualidade de vida em todas as fases da vida especialmente na terceira idade. Exercícios adaptados à capacidade de cada pessoa trazem benefícios significativos tanto para o corpo quanto para a mente, contribuindo para o envelhecimento ativo e saudável. Abaixo, destacam-se os principais ganhos:</h3>
+<ul>
+<li>Melhora humor e sono.</li>
+<li>Fortalece músculos e ossos.</li>
+<li>Estimula circulação e memória.</li>
+<li>Previne doenças como diabetes, hipertensão e depressão.</li>
+</ul>
+</section>
+
+<footer>
+  <p>“Movimentar-se é pensar com o corpo. Cada gesto é um aprendizado. Cada passo é um treino para a mente.”</p>
+  <p style="margin-top:20px;">Feito por turma T-500: Izadora Martins, Larissa Furtuoso, Sibely Royer</p>
+</footer>
+
+
+<script>
+/* ===== 1. Jogo da Memória Avançado com Cronômetro ===== */
+function startAdvancedMemory() {
+  const gameDiv = document.getElementById('advanced-memory-game');
+  const scoreDiv = document.getElementById('memory-score');
+  const timerDiv = document.getElementById('memory-timer');
+  gameDiv.innerHTML = '';
+  scoreDiv.textContent = '';
+  timerDiv.textContent = 'Tempo: 0s';
+  
+  const symbols = ['🍎','🍌','🍇','🍉','🍒','🥝','🍍','🍓'];
+  const cardsArray = [...symbols, ...symbols];
+  cardsArray.sort(() => Math.random() - 0.5);
+
+  let firstCard = null;
+  let secondCard = null;
+  let lockBoard = false;
+  let matches = 0;
+  const totalPairs = symbols.length;
+
+  scoreDiv.textContent = `Acertos: ${matches} / ${totalPairs}`;
+
+  let seconds = 0;
+  if(window.memoryTimer) clearInterval(window.memoryTimer);
+  window.memoryTimer = setInterval(() => {
+    seconds++;
+    timerDiv.textContent = `Tempo: ${seconds.toString().padStart(2,'0')}s`;
+  }, 1000);
+
+  cardsArray.forEach(symbol => {
+    const card = document.createElement('div');
+    card.className = 'memory-card';
+    card.dataset.symbol = symbol;
+    card.textContent = symbol;
+
+    card.addEventListener('click', () => {
+      if(lockBoard || card === firstCard || card.classList.contains('matched')) return;
+      card.style.color = '#000';
+      card.style.background = '#fff';
+
+      if(!firstCard) { firstCard = card; return; }
+      secondCard = card;
+      lockBoard = true;
+
+      if(firstCard.dataset.symbol === secondCard.dataset.symbol) {
+        firstCard.classList.add('matched');
+        secondCard.classList.add('matched');
+        firstCard.style.background = '#99e699';
+        secondCard.style.background = '#99e699';
+        matches++;
+        scoreDiv.textContent = `Acertos: ${matches} / ${totalPairs}`;
+        resetBoard();
+      } else {
+        setTimeout(() => {
+          firstCard.style.background = '#cce0ff';
+          firstCard.style.color = '#cce0ff';
+          secondCard.style.background = '#cce0ff';
+          secondCard.style.color = '#cce0ff';
+          resetBoard();
+        }, 800);
+      }
+
+      if(matches === totalPairs) {
+        scoreDiv.textContent = `Parabéns! Você encontrou todos os pares!`;
+        clearInterval(window.memoryTimer);
+        timerDiv.textContent = `Tempo final: ${seconds}s`;
+      }
+    });
+
+    gameDiv.appendChild(card);
+  });
+
+  function resetBoard() {
+    [firstCard, secondCard] = [null, null];
+    lockBoard = false;
+  }
+}
+
+/* ===== 2. Lembre o Movimento ===== */
+function startSequenceGame() {
+  const gameDiv = document.getElementById('sequence-game');
+  gameDiv.innerHTML = '';
+  const colors = ['#ff6666','#66b3ff','#66ff66','#ffcc66'];
+  let sequence = [];
+  let userSeq = [];
+
+  const info = document.createElement('p');
+  info.textContent = 'Observe a sequência:';
+  info.style.fontSize = '1.2rem';
+  gameDiv.appendChild(info);
+
+  const displayBox = document.createElement('div');
+  displayBox.style.width = '80px';
+  displayBox.style.height = '80px';
+  displayBox.style.margin = '20px auto';
+  displayBox.style.borderRadius = '12px';
+  displayBox.style.background = '#ccc';
+  gameDiv.appendChild(displayBox);
+
+  const feedback = document.createElement('p');
+  feedback.style.fontSize = '1.2rem';
+  gameDiv.appendChild(feedback);
+
+  const buttonsDiv = document.createElement('div');
+  buttonsDiv.style.display = 'flex';
+  buttonsDiv.style.justifyContent = 'center';
+  buttonsDiv.style.gap = '15px';
+  buttonsDiv.style.marginTop = '15px';
+  gameDiv.appendChild(buttonsDiv);
+
+  colors.forEach(c => {
+    const btn = document.createElement('button');
+    btn.className = 'color-button';
+    btn.style.background = c;
+    btn.onclick = () => {
+      userSeq.push(c);
+      if(userSeq.length === sequence.length) {
+        const correct = sequence.every((v,i)=>v===userSeq[i]);
+        if(correct) {
+          feedback.textContent = '✅ Sequência correta!';
+          setTimeout(nextRound, 1000);
+        } else {
+          feedback.textContent = '❌ Errou! Sequência reiniciada.';
+          sequence = [];
+          setTimeout(nextRound, 1000);
+        }
+      }
+    };
+    buttonsDiv.appendChild(btn);
+  });
+
+  nextRound();
+
+  function nextRound() {
+    feedback.textContent = '';
+    userSeq = [];
+    const nextColor = colors[Math.floor(Math.random()*colors.length)];
+    sequence.push(nextColor);
+    showSequence(sequence);
+  }
+
+  function showSequence(seq) {
+    let i = 0;
+    const interval = setInterval(() => {
+      displayBox.style.background = seq[i];
+      setTimeout(() => {
+        displayBox.style.background = '#ccc';
+      }, 400);
+      i++;
+      if(i >= seq.length) clearInterval(interval);
+    }, 800);
+  }
+}
+
+/* ===== 3. Clique no Reflexo ===== */
+function startReflexGame() {
+  const gameDiv = document.getElementById('reflex-game');
+  gameDiv.innerHTML = '<p style="font-size:1.2rem;">Aguarde a cor e clique rápido!</p>';
+  const colors = ['#ff6666','#66ff66','#66b3ff','#ffcc66'];
+
+  const reflexBtn = document.createElement('div');
+  reflexBtn.style.width = '100px';
+  reflexBtn.style.height = '100px';
+  reflexBtn.style.borderRadius = '12px';
+  reflexBtn.style.margin = '15px auto';
+  reflexBtn.style.cursor = 'pointer';
+  reflexBtn.style.background = '#ccc';
+  reflexBtn.style.display = 'flex';
+  reflexBtn.style.alignItems = 'center';
+  reflexBtn.style.justifyContent = 'center';
+  reflexBtn.style.fontSize = '2rem';
+  gameDiv.appendChild(reflexBtn);
+
+  reflexBtn.style.pointerEvents = 'none';
+  const delay = 1000 + Math.random() * 2000;
+  let appearTime;
+
+  setTimeout(() => {
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    reflexBtn.style.background = color;
+    reflexBtn.style.pointerEvents = 'auto';
+    appearTime = new Date().getTime();
+
+    reflexBtn.onclick = () => {
+      const clickTime = new Date().getTime();
+      const reaction = (clickTime - appearTime) / 1000;
+      reflexBtn.textContent = reaction <= 2 ? '✅' : '❌';
+      reflexBtn.style.pointerEvents = 'none';
+    };
+  }, delay);
+}
+
+/* ===== 4. Caminho da Mente ===== */
+function startLogicGame() {
+  const gameDiv = document.getElementById('logic-game');
+  gameDiv.innerHTML = '';
+
+  const start = Math.floor(Math.random() * 10) + 1;
+  const step = Math.floor(Math.random() * 5) + 1;
+  const length = 4;
+  let sequence = [];
+  for(let i=0; i<length; i++){
+    sequence.push(start + i*step);
+  }
+
+  const question = `Qual número falta: ${sequence.slice(0,length-1).join(', ')} , ?`;
+  const answer = sequence[length-1];
+
+  const input = document.createElement('input');
+  input.type='number';
+  input.placeholder='Digite a resposta';
+  input.style.fontSize='1.2rem';
+  input.style.padding='8px';
+  input.style.margin='10px';
+
+  const btn = document.createElement('button');
+  btn.textContent='Verificar';
+
+  const msg = document.createElement('p');
+  msg.style.fontSize='1.2rem';
+
+  btn.onclick=()=> {
+    if(parseInt(input.value)===answer) msg.textContent='✅ Correto!';
+    else msg.textContent=`❌ Tente novamente. A resposta era ${answer}`;
+  };
+
+  const questionP = document.createElement('p');
+  questionP.textContent = question;
+  questionP.style.fontSize='1.2rem';
+  gameDiv.appendChild(questionP);
+  gameDiv.appendChild(input);
+  gameDiv.appendChild(btn);
+  gameDiv.appendChild(msg);
+}
+
+/* ===== 5. Desafio Fácil ===== */
+function startEasyGame() {
+  const gameDiv = document.getElementById('easy-game');
+  gameDiv.innerHTML = '';
+  
+  const emojis = ['🏃‍♂️', '🤸‍♀️', '🏋️‍♂️', '🚴‍♀️', '🤾‍♂️'];
+  const target = emojis[Math.floor(Math.random() * emojis.length)];
+  const instruction = document.createElement('p');
+  instruction.innerHTML = `Clique no emoji: <strong style="font-size:1.5rem">${target}</strong>`;
+  gameDiv.appendChild(instruction);
+
+  const buttonsDiv = document.createElement('div');
+  buttonsDiv.style.display='flex';
+  buttonsDiv.style.justifyContent='center';
+  buttonsDiv.style.gap='15px';
+  buttonsDiv.style.marginTop='15px';
+  gameDiv.appendChild(buttonsDiv);
+
+  emojis.forEach(e => {
+    const btn = document.createElement('button');
+    btn.style.fontSize='2.5rem';
+    btn.style.padding='15px';
+    btn.style.cursor='pointer';
+    btn.textContent = e;
+    btn.onclick = () => {
+      const msg = document.createElement('p');
+      msg.style.fontSize='1.3rem';
+      if(e === target) msg.textContent = '✅ Muito bem!';
+      else msg.textContent = '❌ Tente novamente.';
+      feedbackUpdate(gameDiv, msg);
+      setTimeout(startEasyGame, 1000);
+    };
+    buttonsDiv.appendChild(btn);
+  });
+}
+
+function feedbackUpdate(container, msg) {
+  const oldMsg = container.querySelector('p.feedback');
+  if(oldMsg) oldMsg.remove();
+  msg.className = 'feedback';
+  container.appendChild(msg);
+}
+</script>
+
+</body>
+</html>
